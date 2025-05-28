@@ -183,31 +183,40 @@
            
         
             <!-- Mini-game Section -->
-            <div id="gameContainer">
-                <h2>Ice Cream Clicker Game!</h2>
-                <div id="iceCreams">
-                    <span class="iceCreamEmoji">🍦</span>
-                    <span class="iceCreamEmoji">🍦</span>
-                    <span class="iceCreamEmoji">🍦</span>
-                </div>
-                <p id="score">Score: 0</p>
+                   <div id="gameContainer">
+            <h2>Ice Cream Clicker Game!</h2>
+            <div id="iceCreams">
+                <span class="iceCreamEmoji">🍦</span>
+                <span class="iceCreamEmoji">🍦</span>
+                <span class="iceCreamEmoji">🍦</span>
             </div>
+            <p id="score">Score: 0</p>
+            <!-- Reset Button -->
+            <button id="resetButton" style="font-size: 20px; padding: 10px 20px; background-color: #4682B4; color: #ffffff; border: none; border-radius: 5px; cursor: pointer; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); margin-top: 20px;">
+                Reset Score
+            </button>
+        </div>
         
-            <footer>
-                <p>© 2025 Ice Cream Shop | Made with ❤️</p>
-            </footer>
+        <script>
+            let score = 0;
+            const scoreDisplay = document.getElementById('score');
+            const iceCreams = document.querySelectorAll('.iceCreamEmoji');
+            const resetButton = document.getElementById('resetButton');
         
-            <script>
-                let score = 0;
-                const scoreDisplay = document.getElementById('score');
-                const iceCreams = document.querySelectorAll('.iceCreamEmoji');
-        
-                iceCreams.forEach(iceCream => {
-                    iceCream.addEventListener('click', () => {
-                        score++;
-                        scoreDisplay.textContent = `Score: ${score}`;
-                    });
+            // Increment score when ice cream emojis are clicked
+            iceCreams.forEach(iceCream => {
+                iceCream.addEventListener('click', () => {
+                    score++;
+                    scoreDisplay.textContent = `Score: ${score}`;
                 });
+            });
+        
+            // Reset score when the reset button is clicked
+            resetButton.addEventListener('click', () => {
+                score = 0;
+                scoreDisplay.textContent = `Score: ${score}`;
+            });
+        </script>
             </script>
         </body>
         </html>
@@ -228,11 +237,21 @@
             </script>
         </body>
         
-            <!-- Button with ice cream emoji -->
-            <button id="iceCreamButton">🍦 Click Me!</button>
-        
+          
+            
+            <script>
+                let score = 0;
+                const scoreDisplay = document.getElementById('score');
+                const iceCreams = document.querySelectorAll('.iceCreamEmoji');
+                const resetButton = document.getElementById('resetButton');
+            
+                iceCreams
+
+            </const>
             <!-- Container for popping up ice cream emojis -->
-            <div id="emojiContainer"></div>
+            <div id="emojiContainer">
+                
+            </div>
         
             <footer>
                 <p>© 2025 Ice Cream Shop | Made with ❤️</p>
