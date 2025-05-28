@@ -2,27 +2,553 @@
     </html>
     <DOCTYPE html>
         <head> 
-            <title>ICE CREAM SHOP</title>
+    
+        <body>
+            <h1>Welcome to the Ice Cream Shop!</h1>
+            <p>Najslađe mjesto za sve ljubitelje sladoleda!</p>
+            <img src="be7754be415029b74f62e38fe910de7a.jpg" alt="Ice Cream" width="300" height="300">
+            <p>Okusi koji hlade srce</p>
+        
+            <!-- Button with ice cream emoji -->
+            <button id="iceCreamButton">🍦 Click Me!</button>
+        
+            <!-- Container for popping up ice cream emojis -->
+            <div id="emojiContainer"></div>
+        
+            <footer>
+                <p>© 2025 Ice Cream Shop | Made with ❤️</p>
+            </footer>
+        
+            <script>
+                const button = document.getElementById('iceCreamButton');
+                const container = document.getElementById('emojiContainer');
+        
+                button.addEventListener('click', () => {
+                    const emoji = document.createElement('span');
+                    emoji.textContent = '🍦';
+                    container.appendChild(emoji);
+                });
+            </script>
+        </body>
+        </html>        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Ice Cream Shop</title>
+            <style>
+                /* General Styles */
+                body {
+                    background-color: #fce4ec; /* Light pink background */
+                    font-family: 'Arial', sans-serif;
+                    margin: 0;
+                    padding: 0;
+                    text-align: center;
+                }
+        
+                h1 {
+                    color: #ffffff;
+                    background-color: #ff80ab; /* Bright pink header */
+                    padding: 20px;
+                    margin: 0;
+                    font-size: 3em;
+                }
+        
+                p {
+                    color: #6a1b9a; /* Deep purple text */
+                    font-size: 1.2em;
+                }
+        
+                /* Image Styling */
+                img {
+                    border-radius: 15px;
+                    margin: 20px auto;
+                    display: block;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                }
+        
+                /* Button Styling */
+                button {
+                    font-size: 20px;
+                    padding: 10px 20px;
+                    margin-top: 20px;
+                    background-color: #ff80ab;
+                    color: #ffffff;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+                }
+        
+                button:hover {
+                    background-color: #ff4081; /* Darker pink on hover */
+                }
+        
+                /* Emoji Container */
+                #emojiContainer {
+                    margin-top: 20px;
+                }
+        
+                span {
+                    font-size: 30px;
+                    margin: 5px;
+                }
+        
+                /* Footer */
+                footer {
+                    background-color: #ff80ab;
+                    color: #ffffff;
+                    padding: 10px;
+                    position: fixed;
+                    bottom: 0;
+                    width: 100%;
+                }
+            </style>
         </head>
         <body>
+            
+            <!-- New Section with Bosnian Text -->
+            <section style="background-color: #4682B4; color: #ffffff; padding: 20px; margin: 20px auto; border-radius: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); width: 80%; text-align: center;">
+                <h2>Zašto volimo sladoled?</h2>
+                <p>Sladoled nije samo desert, već trenutak sreće! Svaki zalogaj donosi osvježenje i osmijeh na lice. Naša ponuda uključuje najfinije okuse, od klasične vanilije do egzotičnog manga. Dođite i otkrijte svoj omiljeni okus!</p>
+            </section>
+                <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Ice Cream Shop Mini Game</title>
+            <style>
+                /* General Styles */
+                body {
+                    background-color: #f0f8ff; /* Alice blue background */
+                    font-family: 'Arial', sans-serif;
+                    margin: 0;
+                    padding: 0;
+                    text-align: center;
+                }
+        
+                h1 {
+                    color: #ffffff;
+                    background-color: #4682B4; /* Steel blue header */
+                    padding: 20px;
+                    margin: 0;
+                    font-size: 3em;
+                }
+        
+                p {
+                    color: #000080; /* Navy blue text */
+                    font-size: 1.2em;
+                }
+        
+                /* Mini-game Styles */
+                #gameContainer {
+                    margin: 20px auto;
+                    padding: 20px;
+                    background-color: #ffb6c1; /* Light pink */
+                    border-radius: 15px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                    width: 80%;
+                    text-align: center;
+                }
+        
+                .iceCreamEmoji {
+                    font-size: 50px;
+                    cursor: pointer;
+                    margin: 10px;
+                    transition: transform 0.2s;
+                }
+        
+                .iceCreamEmoji:hover {
+                    transform: scale(1.2); /* Slight zoom effect */
+                }
+        
+                #score {
+                    font-size: 1.5em;
+                    color: #ffffff;
+                    margin-top: 10px;
+                }
+        
+                footer {
+                    background-color: #4682B4;
+                    color: #ffffff;
+                    padding: 10px;
+                    position: fixed;
+                    bottom: 0;
+                    width: 100%;
+                }
+            </style>
+        </head>
+        <body>
+           
+        
+            <!-- Mini-game Section -->
+            <div id="gameContainer">
+                <h2>Ice Cream Clicker Game!</h2>
+                <div id="iceCreams">
+                    <span class="iceCreamEmoji">🍦</span>
+                    <span class="iceCreamEmoji">🍦</span>
+                    <span class="iceCreamEmoji">🍦</span>
+                </div>
+                <p id="score">Score: 0</p>
+            </div>
+        
+            <footer>
+                <p>© 2025 Ice Cream Shop | Made with ❤️</p>
+            </footer>
+        
+            <script>
+                let score = 0;
+                const scoreDisplay = document.getElementById('score');
+                const iceCreams = document.querySelectorAll('.iceCreamEmoji');
+        
+                iceCreams.forEach(iceCream => {
+                    iceCream.addEventListener('click', () => {
+                        score++;
+                        scoreDisplay.textContent = `Score: ${score}`;
+                    });
+                });
+            </script>
+        </body>
+        </html>
+        
+            <footer>
+                <p>© 2025 Ice Cream Shop | Made with ❤️</p>
+            </footer>
+        
+            <script>
+                const button = document.getElementById('iceCreamButton');
+                const container = document.getElementById('emojiContainer');
+        
+                button.addEventListener('click', () => {
+                    const emoji = document.createElement('span');
+                    emoji.textContent = '🍦';
+                    container.appendChild(emoji);
+                });
+            </script>
+        </body>
+        
+            <!-- Button with ice cream emoji -->
+            <button id="iceCreamButton">🍦 Click Me!</button>
+        
+            <!-- Container for popping up ice cream emojis -->
+            <div id="emojiContainer"></div>
+        
+            <footer>
+                <p>© 2025 Ice Cream Shop | Made with ❤️</p>
+            </footer>
+        
+            <script>
+                const button = document.getElementById('iceCreamButton');
+                const container = document.getElementById('emojiContainer');
+        
+                button.addEventListener('click', () => {
+                    const emoji = document.createElement('span');
+                    emoji.textContent = '🍦';
+                    container.appendChild(emoji);
+                });
+            </script>
+        </body>
+        </html>        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Ice Cream Shop</title>
+            <style>
+                /* General Styles */
+                body {
+                    background-color: #87CEEB; /* Light blue background */
+                    font-family: 'Arial', sans-serif;
+                    margin: 0;
+                    padding: 0;
+                    text-align: center;
+                }
+        
+                h1 {
+                    color: #ffffff;
+                    background-color: #4682B4; /* Steel blue header */
+                    padding: 20px;
+                    margin: 0;
+                    font-size: 3em;
+                }
+        
+                p {
+                    color: #1E90FF; /* Dodger blue text */
+                    font-size: 1.2em;
+                }
+        
+                /* Image Styling */
+                img {
+                    border-radius: 15px;
+                    margin: 20px auto;
+                    display: block;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                }
+        
+                /* Button Styling */
+                button {
+                    font-size: 20px;
+                    padding: 10px 20px;
+                    margin-top: 20px;
+                    background-color: #4682B4; /* Steel blue button */
+                    color: #ffffff;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+                }
+        
+                button:hover {
+                    background-color: #1E90FF; /* Dodger blue on hover */
+                }
+        
+                /* Emoji Container */
+                #emojiContainer {
+                    margin-top: 20px;
+                }
+        
+                span {
+                    font-size: 30px;
+                    margin: 5px;
+                }
+        
+                /* Footer */
+                footer {
+                    background-color: #4682B4;
+                    color: #ffffff;
+                    padding: 10px;
+                    position: fixed;
+                    bottom: 0;
+                    width: 100%;
+                }
+            </style>
+        </head>
+        <body>
+            
 
-        <h1>ICE CREAM SHOP</h1>
-        <P>Bad ice cream, postanimo baddies</P>
+    </body>    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ice Cream Shop</title>
         <style>
+            /* General Styles */
             body {
-                background-color: #1ccabe;
-                font-family: Arial, sans-serif;
+                background-color: #87CEEB; /* Light blue background */
+                font-family: 'Arial', sans-serif;
+                margin: 0;
+                padding: 0;
                 text-align: center;
             }
+    
             h1 {
-                color: #66b2e7;
+                color: #ffffff;
+                background-color: #4682B4; /* Steel blue header */
+                padding: 20px;
+                margin: 0;
+                font-size: 3em;
             }
+    
             p {
-                color: #7cbfeb;
+                color: #000080; /* Navy blue text for darker appearance */
+                font-size: 1.2em;
+            }
+    
+            /* Image Styling */
+            img {
+                border-radius: 15px;
+                margin: 20px auto;
+                display: block;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+    
+            /* Button Styling */
+            button {
+                font-size: 20px;
+                padding: 10px 20px;
+                margin-top: 20px;
+                background-color: #4682B4; /* Steel blue button */
+                color: #ffffff;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            }
+    
+            button:hover {
+                background-color: #1E90FF; /* Dodger blue on hover */
+            }            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Ice Cream Maker Game</title>
+                <style>
+                    /* General Styles */
+                    body {
+                        background-color: #f0f8ff; /* Alice blue background */
+                        font-family: 'Arial', sans-serif;
+                        margin: 0;
+                        padding: 0;
+                        text-align: center;
+                    }
+            
+                    h1 {
+                        color: #ffffff;
+                        background-color: #4682B4; /* Steel blue header */
+                        padding: 20px;
+                        margin: 0;
+                        font-size: 3em;
+                    }
+            
+                    p {
+                        color: #000080; /* Navy blue text */
+                        font-size: 1.2em;
+                    }
+            
+                    /* Game Container */
+                    #gameContainer {
+                        margin: 20px auto;
+                        padding: 20px;
+                        background-color: #ffb6c1; /* Light pink */
+                        border-radius: 15px;
+                        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                        width: 80%;
+                        text-align: center;
+                    }
+            
+                    .fruitEmoji {
+                        font-size: 50px;
+                        cursor: pointer;
+                        margin: 10px;
+                        transition: transform 0.2s;
+                    }
+            
+                    .fruitEmoji:hover {
+                        transform: scale(1.2); /* Slight zoom effect */
+                    }
+            
+                    #iceCreamBowl {
+                        margin-top: 20px;
+                        padding: 20px;
+                        background-color: #ffffff; /* White bowl */
+                        border-radius: 15px;
+                        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                        width: 300px;
+                        height: 150px;
+                        display: inline-block;
+                        text-align: center;
+                    }
+            
+                    #iceCreamBowl span {
+                        font-size: 30px;
+                        margin: 5px;
+                    }
+            
+                    #finishButton {
+                        font-size: 20px;
+                        padding: 10px 20px;
+                        margin-top: 20px;
+                        background-color: #4682B4; /* Steel blue button */
+                        color: #ffffff;
+                        border: none;
+                        border-radius: 5px;
+                        cursor: pointer;
+                        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+                    }
+            
+                    #finishButton:hover {
+                        background-color: #1E90FF; /* Dodger blue on hover */
+                    }
+            
+                    footer {
+                        background-color: #4682B4;
+                        color: #ffffff;
+                        padding: 10px;
+                        position: fixed;
+                        bottom: 0;
+                        width: 100%;
+                    }
+                </style>
+            </head>
+            <body>
+                <h1>Ice Cream Maker Game!</h1>
+                <p>Click on the fruits to add them to your ice cream bowl, then click "Finish" to make your ice cream!</p>
+            
+                <!-- Game Section -->
+                <div id="gameContainer">
+                    <h2>Choose Your Fruits:</h2>
+                    <div id="fruits">
+                        <span class="fruitEmoji">🍓</span>
+                        <span class="fruitEmoji">🍌</span>
+                        <span class="fruitEmoji">🍍</span>
+                        <span class="fruitEmoji">🍒</span>
+                        <span class="fruitEmoji">🥭</span>
+                    </div>
+                    <h2>Your Ice Cream Bowl:</h2>
+                    <div id="iceCreamBowl"></div>
+                    <button id="finishButton">Finish</button>
+                    <div id="result" style="margin-top: 20px; font-size: 50px;"></div>
+                </div>
+            
+                <footer>
+                    <p>© 2025 Ice Cream Shop | Made with ❤️</p>
+                </footer>
+            
+                <script>
+                    const fruits = document.querySelectorAll('.fruitEmoji');
+                    const iceCreamBowl = document.getElementById('iceCreamBowl');
+                    const finishButton = document.getElementById('finishButton');
+                    const result = document.getElementById('result');
+            
+                    fruits.forEach(fruit => {
+                        fruit.addEventListener('click', () => {
+                            const fruitClone = document.createElement('span');
+                            fruitClone.textContent = fruit.textContent;
+                            iceCreamBowl.appendChild(fruitClone);
+                        });
+                    });
+            
+                    finishButton.addEventListener('click', () => {
+                        if (iceCreamBowl.children.length > 0) {
+                            result.textContent = '🍦 Enjoy your ice cream!';
+                        } else {
+                            result.textContent = 'Please add some fruits first!';
+                        }
+                    });
+                </script>
+            </body>
+            </html>            <section style="background-color: #4682B4; color: #ffffff; padding: 20px; margin: 20px auto; border-radius: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); width: 80%; text-align: center;">
+                <h2>Prirodni sladoledi od voća</h2>
+                <p>Priprema sladoleda od svježeg voća je savršen način da se uživa u zdravim i osvježavajućim poslasticama. Koristimo samo najkvalitetnije voće poput jagoda, banana, manga i ananasa kako bismo stvorili jedinstvene kombinacije okusa.</p>
+                <p>Naši sladoledi su napravljeni bez umjetnih dodataka, koristeći prirodne sastojke koji čuvaju okus i svježinu voća. Svaki zalogaj donosi radost i osvježenje, savršeno za vruće ljetne dane.</p>
+                <p>Dođite i otkrijte čaroliju prirodnih sladoleda - užitak za cijelu porodicu!</p>
+            </section>
+    
+            /* Emoji Container */
+            #emojiContainer {
+                margin-top: 20px;
+            }
+    
+            span {
+                font-size: 30px;
+                margin: 5px;
+            }
+    
+            /* Footer */
+            footer {
+                background-color: #4682B4;
+                color: #ffffff;
+                padding: 10px;
+                position: fixed;
+                bottom: 0;
+                width: 100%;
             }
         </style>
-        <img src="be7754be415029b74f62e38fe910de7a.jpg" alt="Ice Cream" width="200" height="200">
-        <p>UKUS NEBA</p>
-        <P>ICE CREAM</P>
-
+    </head>
+    <body>
+        
     </body>
+    </html>
